@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A source-grounded integration support copilot and evaluation workspace.">
+  <title>Syncdesk · Support workspace</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to workspace</a>
+<div class="shell">
+  <aside class="sidebar" aria-label="Workspace navigation">
+    <a class="brand" href="#workspace"><span class="brand-mark" data-icon="logo"></span><span>syncdesk<span class="brand-dot">.</span><small>SUPPORT WORKSPACE</small></span></a>
+    <p class="nav-label">WORKSPACE</p>
+    <nav>
+      <button data-page="workspace" class="nav active"><span data-icon="inbox"></span>Ticket workspace</button>
+      <button data-page="sources" class="nav"><span data-icon="book"></span>Knowledge base</button>
+      <button data-page="handoffs" class="nav"><span data-icon="route"></span>Handoffs <span id="handoff-count" class="nav-count">0</span></button>
+    </nav>
+    <p class="nav-label second">QUALITY</p>
+    <nav><button data-page="evaluation" class="nav"><span data-icon="chart"></span>Evaluation lab</button></nav>
+    <div class="rail-tickets">
+      <div class="rail-heading"><p class="nav-label">CASE HISTORY</p><span class="count" id="ticket-count">0</span></div>
+      <div id="tickets" class="ticket-list" aria-label="Case history"></div>
+    </div>
+    <div class="sidebar-foot">
+      <div class="environment"><span class="online-dot"></span><div><strong>Demo environment</strong><small>Fictional support tickets</small></div></div>
+      <div class="profile"><span class="profile-icon" data-icon="user"></span><div><strong>Support workspace</strong><small>Integration troubleshooting</small></div></div>
+    </div>
+  </aside>
+  <main id="main">
+    <header class="topbar">
+      <div class="crumb"><span>Workspace</span><span class="chevron" data-icon="chevron"></span><strong id="page-label">Ticket workspace</strong></div>
+      <div class="topbar-actions">
+        <button class="btn secondary" id="open-guide" type="button" aria-haspopup="dialog"><span data-icon="book"></span> How to use</button>
+        <button class="btn primary" id="new-ticket" type="button"><span data-icon="plus"></span> New diagnosis</button>
+      </div>
+    </header>
+    <div class="container">
+      <section id="workspace" class="page">
+        <section id="start-screen" class="start-screen" aria-labelledby="start-title">
+          <div class="start-inner">
+            <div class="assistant-mark" data-icon="logo"></div>
+            <h1 id="start-title">What’s blocking<br>the connection?</h1>
+            <p class="start-description">Describe the issue. Syncdesk checks the documentation, asks for missing details, and helps you decide what to do next.</p>
+            <form id="composer" class="composer">
+              <label class="sr-only" for="compose-message">Describe an integration issue</label>
+              <textarea id="compose-message" rows="3" maxlength="4000" required placeholder="Describe an integration issue…"></textarea>
+              <div class="composer-bottom"><span data-icon="shield"></span><span id="composer-mode">Use fictional details</span><button class="btn primary analyze-btn" type="submit"><span data-icon="arrow"></span> Analyze issue</button></div>
+            </form>
+            <div class="suggestions" id="suggestions" aria-label="Example tickets"></div>
+          </div>
+        </section>
+        <div class="workgrid" id="case-grid" hidden>
+          <article class="panel diagnosis">
+            <div class="panelhead case-head"><div><div class="ticket-meta" id="ticket-meta"></div><h2 id="ticket-title" tabindex="-1">Loading ticket…</h2></div><span class="status" id="ticket-status">Open</span></div>
+            <div class="tabs" role="group" aria-label="Triage method">
+              <button data-view="copilot" class="tab active"><span data-icon="spark"></span> Copilot</button>
+              <button data-view="keyword" class="tab"><span data-icon="search"></span> Keyword search</button>
+              <button data-view="checklist" class="tab"><span data-icon="list"></span> Checklist</button>
+            </div>
+            <div class="case-body">
+              <div class="customer-note"><span class="note-label" data-icon="message"></span><div><h3>Customer message</h3><p id="ticket-message"></p></div></div>
+              <div id="case-view" aria-live="polite"><p class="loading">Loading diagnosis…</p></div>
+            </div>
+          </article>
+          <aside class="panel evidence" aria-label="Supporting evidence">
+            <div class="panelhead"><div class="panel-title"><span class="iconbox" data-icon="book"></span><div><h2>Evidence</h2><p>Supporting documentation</p></div></div></div>
+            <div id="evidence-content" class="evidence-content"></div>
+            <div class="policy"><span data-icon="shield"></span><p>Review the cited procedure before sharing it. Syncdesk never connects to or changes a connected account.</p></div>
+          </aside>
+        </div>
+      </section>
+      <section id="sources" class="page" hidden>
+        <header class="section-head evaluation-head"><div><div class="eyebrow"><span data-icon="book"></span> DOCUMENTATION</div><h1>Knowledge base</h1><p>Search vendor documentation or add a reviewed playbook for any integration.</p></div><button class="btn primary" id="add-playbook"><span data-icon="plus"></span> Add playbook</button></header>
+        <form id="source-form" class="search-form"><label class="field-label" for="source-search">Search by symptom, topic, or error code</label><div class="search-input"><span data-icon="search"></span><input id="source-search" placeholder="Try webhook redirects or app approval"><button class="btn primary" type="submit">Search</button></div></form>
+        <div class="source-grid" id="source-grid"></div>
+      </section>
+      <section id="handoffs" class="page" hidden>
+        <header class="section-head"><div class="eyebrow"><span data-icon="route"></span> HUMAN REVIEW</div><h1>Handoffs</h1><p>Review and copy packets queued in this browser for the next support owner.</p></header>
+        <div id="handoff-list"></div>
+      </section>
+      <section id="evaluation" class="page" hidden>
+        <header class="section-head evaluation-head"><div><div class="eyebrow"><span data-icon="chart"></span> QUALITY ASSURANCE</div><h1>Evaluation lab</h1><p>Compare three triage workflows on 30 held-out fictional tickets.</p></div><button class="btn primary" id="run-eval"><span data-icon="refresh"></span> Run evaluation</button></header>
+        <div id="eval-content" aria-live="polite"></div>
+      </section>
+    </div>
+    <footer class="footer"><span>Syncdesk · Independent portfolio prototype</span><span>Local workspace · Example data</span></footer>
+  </main>
+</div>
+<dialog id="guide-dialog" aria-labelledby="guide-title">
+  <div class="guide-content">
+    <div class="dialog-head">
+      <div><h2 id="guide-title">How to use Syncdesk</h2><p>Start with a fictional integration ticket.</p></div>
+      <button type="button" class="iconbtn" id="close-guide" aria-label="Close guide"><span data-icon="close"></span></button>
+    </div>
+    <ol class="steps guide-steps">
+      <li><div><h3>Describe the issue</h3><p>Enter the service, what you were trying to do, and the exact error if you have it. Then select <strong>Analyze issue</strong>.</p><blockquote class="quote">Stripe webhook setup: the first test event failed with HTTP 302.</blockquote></div></li>
+      <li><div><h3>Review the diagnosis</h3><p><strong>Review ready</strong> means a source matched. Check the steps against the passage in <strong>Evidence</strong>.</p><p><strong>Needs details</strong> means the copilot needs a follow-up, such as the exact error text or status code.</p></div></li>
+      <li><div><h3>Hand off a case if needed</h3><p>When you see <strong>Human review</strong>, select <strong>Queue handoff</strong>. Open <strong>Handoffs</strong> to review and copy the packet. The packet is saved in this browser for you to share manually.</p></div></li>
+    </ol>
+    <p class="guide-extra"><strong>Local LLM</strong> generates a cited diagnosis when Ollama and the model are available. Rules mode shows the reviewed playbook if the model is unavailable.</p>
+    <p class="guide-extra">To cover another service, open <strong>Knowledge base → Add playbook</strong>. Add a reviewed source, the exact error or phrase, and the steps to take.</p>
+    <div class="dialog-actions"><button type="button" class="btn primary" id="guide-example" disabled><span data-icon="arrow"></span> Try the Stripe example</button></div>
+  </div>
+</dialog>
+<dialog id="playbook-dialog">
+  <form id="playbook-form"><div class="dialog-head"><div><h2>Add a playbook</h2><p>Use a source you’ve reviewed. The playbook stays in this browser.</p></div><button type="button" class="iconbtn" id="close-playbook" aria-label="Close"><span data-icon="close"></span></button></div>
+  <label>Service name<input name="product" required maxlength="80" placeholder="e.g. Salesforce"></label>
+  <label>Procedure title<input name="article" required maxlength="140" placeholder="e.g. Review the expired authorization"></label>
+  <label>Reference URL<input name="url" type="url" required maxlength="500" placeholder="https://…"></label>
+  <label>Exact error phrase or code<input name="trigger" required maxlength="140" placeholder="e.g. connection authorization expired"></label>
+  <label>Supporting passage<textarea name="passage" rows="2" required maxlength="1200"></textarea></label>
+  <label>Approved steps, one per line<textarea name="procedure" rows="3" required maxlength="1500"></textarea></label>
+  <label>Handoff owner, if required<input name="queue" maxlength="100" placeholder="e.g. Workspace administrator"></label>
+  <div class="dialog-actions"><button type="button" class="btn secondary" id="cancel-playbook">Cancel</button><button class="btn primary" type="submit"><span data-icon="check"></span> Save playbook</button></div></form>
+</dialog>
+<div id="toast" role="status" hidden></div>
+</body>
+</html>
