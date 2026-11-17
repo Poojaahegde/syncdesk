@@ -1,0 +1,2640 @@
+{
+  "summary": {
+    "Copilot": {
+      "correct": 29,
+      "total": 30,
+      "resolution": 10,
+      "resolution_total": 11,
+      "unsupported": 0,
+      "escalation": 29,
+      "escalation_precision": [
+        19,
+        20
+      ],
+      "escalation_recall": [
+        19,
+        19
+      ],
+      "followups": 12,
+      "latency_ms": 0.034,
+      "handling_seconds": null
+    },
+    "Keyword search": {
+      "correct": 20,
+      "total": 30,
+      "resolution": 10,
+      "resolution_total": 11,
+      "unsupported": 10,
+      "escalation": 24,
+      "escalation_precision": [
+        14,
+        15
+      ],
+      "escalation_recall": [
+        14,
+        19
+      ],
+      "followups": 0,
+      "latency_ms": 0.033,
+      "handling_seconds": null
+    },
+    "Setup checklist": {
+      "correct": 14,
+      "total": 30,
+      "resolution": 2,
+      "resolution_total": 11,
+      "unsupported": 1,
+      "escalation": 20,
+      "escalation_precision": [
+        18,
+        27
+      ],
+      "escalation_recall": [
+        18,
+        19
+      ],
+      "followups": 0,
+      "latency_ms": 0.013,
+      "handling_seconds": null
+    },
+    "Local RAG": {
+      "correct": 29,
+      "total": 30,
+      "resolution": 10,
+      "resolution_total": 11,
+      "unsupported": 0,
+      "escalation": 29,
+      "escalation_precision": [
+        19,
+        20
+      ],
+      "escalation_recall": [
+        19,
+        19
+      ],
+      "followups": 12,
+      "latency_ms": 687.397,
+      "handling_seconds": null
+    }
+  },
+  "rows": [
+    {
+      "method": "Copilot",
+      "id": "E01",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.654,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E02",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.035,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E03",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.063,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E04",
+      "family": "Missing status",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.071,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E05",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.028,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E06",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.026,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E07",
+      "family": "Conflicting evidence",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.053,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E08",
+      "family": "Uncovered status",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.053,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E09",
+      "family": "Financial impact",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.002,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E10",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.232,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E11",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.026,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E12",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.025,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E13",
+      "family": "Missing evidence",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.062,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E14",
+      "family": "Out of scope",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.062,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E15",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.315,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E16",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E17",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.026,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E18",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.023,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E19",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.026,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E20",
+      "family": "Missing evidence",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.049,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E21",
+      "family": "Symptom paraphrase",
+      "expected_route": "drive-disk",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.043,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E22",
+      "family": "Prior attempt failed",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.004,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E23",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "shopify-link",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.255,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E24",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "shopify-link",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.03,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E25",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "shopify-email",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.026,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E26",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "shopify-email",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.025,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E27",
+      "family": "Unknown product",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.03,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E28",
+      "family": "Uncovered product",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.028,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E29",
+      "family": "Ambiguous service",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 2,
+      "latency_ms": 0.041,
+      "rag_states": [
+        "",
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Copilot",
+      "id": "E30",
+      "family": "Negated symptom",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.054,
+      "rag_states": [
+        "",
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E01",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.075,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E02",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.04,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E03",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.034,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E04",
+      "family": "Missing status",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-server",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.036,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E05",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.034,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E06",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.034,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E07",
+      "family": "Conflicting evidence",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.034,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E08",
+      "family": "Uncovered status",
+      "expected_route": "review",
+      "actual_route": "stripe-redirect",
+      "expected_status": "escalate",
+      "actual_status": "resolve",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.04,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E09",
+      "family": "Financial impact",
+      "expected_route": "review",
+      "actual_route": "stripe-redirect",
+      "expected_status": "escalate",
+      "actual_status": "resolve",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.035,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E10",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.035,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E11",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E12",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E13",
+      "family": "Missing evidence",
+      "expected_route": "review",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E14",
+      "family": "Out of scope",
+      "expected_route": "review",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E15",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E16",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E17",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E18",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.031,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E19",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E20",
+      "family": "Missing evidence",
+      "expected_route": "drive-access",
+      "actual_route": "drive-disk",
+      "expected_status": "escalate",
+      "actual_status": "resolve",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E21",
+      "family": "Symptom paraphrase",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.034,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E22",
+      "family": "Prior attempt failed",
+      "expected_route": "review",
+      "actual_route": "drive-disk",
+      "expected_status": "escalate",
+      "actual_status": "resolve",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E23",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "shopify-link",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E24",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "shopify-link",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E25",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "shopify-email",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E26",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "shopify-email",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E27",
+      "family": "Unknown product",
+      "expected_route": "review",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E28",
+      "family": "Uncovered product",
+      "expected_route": "review",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E29",
+      "family": "Ambiguous service",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.033,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Keyword search",
+      "id": "E30",
+      "family": "Negated symptom",
+      "expected_route": "review",
+      "actual_route": "stripe-redirect",
+      "expected_status": "escalate",
+      "actual_status": "resolve",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.032,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E01",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.155,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E02",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.014,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E03",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.011,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E04",
+      "family": "Missing status",
+      "expected_route": "stripe-redirect",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.014,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E05",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E06",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.006,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E07",
+      "family": "Conflicting evidence",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-redirect",
+      "expected_status": "escalate",
+      "actual_status": "resolve",
+      "correct": false,
+      "unsupported": true,
+      "followups": 0,
+      "latency_ms": 0.004,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E08",
+      "family": "Uncovered status",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E09",
+      "family": "Financial impact",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.002,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E10",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.049,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E11",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.011,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E12",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.007,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E13",
+      "family": "Missing evidence",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.014,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E14",
+      "family": "Out of scope",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.014,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E15",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E16",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.025,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E17",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.013,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E18",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.028,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E19",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.013,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E20",
+      "family": "Missing evidence",
+      "expected_route": "drive-access",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.013,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E21",
+      "family": "Symptom paraphrase",
+      "expected_route": "drive-disk",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.014,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E22",
+      "family": "Prior attempt failed",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E23",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "shopify-link",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.024,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E24",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.03,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E25",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E26",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "shopify-email",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E27",
+      "family": "Unknown product",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E28",
+      "family": "Uncovered product",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.012,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E29",
+      "family": "Ambiguous service",
+      "expected_route": "drive-disk",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.013,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Setup checklist",
+      "id": "E30",
+      "family": "Negated symptom",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.013,
+      "rag_states": [
+        ""
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E01",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 871.505,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "The user is experiencing an HTTP 307 redirect as described in the documentation.",
+      "ticket_quote": "Stripe Workbench shows an HTTP 307 on the webhook endpoint from our first sandbox test.",
+      "source_quote": "Set the webhook endpoint destination to the URL resolved by the redirect."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E02",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 863.473,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "The user reported an HTTP 301 redirect from the Stripe event delivery endpoint, which is consistent with the documentation.",
+      "ticket_quote": "The Stripe event delivery endpoint returns HTTP 301.",
+      "source_quote": "Set the webhook endpoint destination to the URL resolved by the redirect."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E03",
+      "family": "Delivery redirect",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 743.081,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "The user is experiencing a redirect issue with their Stripe webhook URL.",
+      "ticket_quote": "Our Stripe webhook URL is redirecting during the very first test.",
+      "source_quote": "Set the webhook endpoint destination to the URL resolved by the redirect."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E04",
+      "family": "Missing status",
+      "expected_route": "stripe-redirect",
+      "actual_route": "stripe-redirect",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 1504.896,
+      "rag_states": [
+        "abstained",
+        "abstained"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E05",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 639.205,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "HTTP 503 error in Workbench",
+      "ticket_quote": "Stripe invoices test fine but our webhook reports HTTP 503 in Workbench.",
+      "source_quote": "Review your application\u2019s logs"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E06",
+      "family": "Server error",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 695.516,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "The user is experiencing a 500 error from the Stripe webhook endpoint.",
+      "ticket_quote": "Stripe webhook endpoint reports a 500 every time our sandbox sends an event.",
+      "source_quote": "Review your application\u2019s logs"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E07",
+      "family": "Conflicting evidence",
+      "expected_route": "stripe-server",
+      "actual_route": "stripe-server",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 666.559,
+      "rag_states": [
+        "policy",
+        "generated"
+      ],
+      "diagnosis": "HTTP 5xx errors are documented in the source.",
+      "ticket_quote": "The Stripe webhook logs show 302 and 500 on different attempts.",
+      "source_quote": "Review your application\u2019s logs"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E08",
+      "family": "Uncovered status",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 779.946,
+      "rag_states": [
+        "abstained",
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E09",
+      "family": "Financial impact",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.005,
+      "rag_states": [
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E10",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 685.239,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Slack app installation blocked due to workspace approval request",
+      "ticket_quote": "The Slack install is blocked because the app needs workspace approval.",
+      "source_quote": "App requests are sent to all workspace owners and app managers."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E11",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 689.554,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Slack shows a pending app request for the inventory connector.",
+      "ticket_quote": "Slack shows a pending app request for the inventory connector.",
+      "source_quote": "App requests are sent to all workspace owners and app managers."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E12",
+      "family": "Admin approval",
+      "expected_route": "slack-approval",
+      "actual_route": "slack-approval",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 653.652,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Slack app installation requires workspace approval",
+      "ticket_quote": "Trying to install the Slack app and it says approval required.",
+      "source_quote": "App requests are sent to all workspace owners and app managers."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E13",
+      "family": "Missing evidence",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 567.586,
+      "rag_states": [
+        "abstained",
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E14",
+      "family": "Out of scope",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 751.362,
+      "rag_states": [
+        "abstained",
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E15",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 731.255,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Local storage is full",
+      "ticket_quote": "On GDrive desktop, file changes stopped and the status says local storage is full.",
+      "source_quote": "You must have enough local storage to sync files via Drive for desktop."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E16",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 764.784,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Low disk space is causing the Google Drive sync to be stuck.",
+      "ticket_quote": "Google Drive is stuck syncing. There\u2019s a low disk space warning on the computer.",
+      "source_quote": "You must have enough local storage to sync files via Drive for desktop."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E17",
+      "family": "Local storage",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 680.581,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Not enough local disk space",
+      "ticket_quote": "Drive for desktop says not enough local disk space when updating the shared folders.",
+      "source_quote": "You must have enough local storage to sync files via Drive for desktop."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E18",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 598.007,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Insufficient permissions to sync changes to a shared file",
+      "ticket_quote": "Google Drive reports insufficient permissions to sync changes to a shared file.",
+      "source_quote": "request edit access"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E19",
+      "family": "File permissions",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 589.454,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Drive access issue",
+      "ticket_quote": "Drive for desktop has a file with view-only access, but we need to sync an edit.",
+      "source_quote": "request edit access"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E20",
+      "family": "Missing evidence",
+      "expected_route": "drive-access",
+      "actual_route": "drive-access",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 1335.655,
+      "rag_states": [
+        "abstained",
+        "generated"
+      ],
+      "diagnosis": "The user is unable to edit files in Google Drive.",
+      "ticket_quote": "The support ticket says Google Drive won't sync.",
+      "source_quote": "request edit access"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E21",
+      "family": "Symptom paraphrase",
+      "expected_route": "drive-disk",
+      "actual_route": "review",
+      "expected_status": "resolve",
+      "actual_status": "escalate",
+      "correct": false,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 739.612,
+      "rag_states": [
+        "abstained",
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E22",
+      "family": "Prior attempt failed",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 0.007,
+      "rag_states": [
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E23",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "shopify-link",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 628.321,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Expired install link",
+      "ticket_quote": "Shopify says our custom app install link has expired. It was generated eight days ago.",
+      "source_quote": "custom install links expire after seven days"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E24",
+      "family": "Expired link",
+      "expected_route": "shopify-link",
+      "actual_route": "shopify-link",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 627.945,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "Expired install link",
+      "ticket_quote": "Custom app link for Shopify is 10 days old. The link no longer works.",
+      "source_quote": "custom install links expire after seven days"
+    },
+    {
+      "method": "Local RAG",
+      "id": "E25",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "shopify-email",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 693.148,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "email_verification",
+      "ticket_quote": "A Shopify app install prompt says to verify my email before proceeding.",
+      "source_quote": "If the install screen asks you to do either, then follow the prompt to continue installing the app."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E26",
+      "family": "Email verification",
+      "expected_route": "shopify-email",
+      "actual_route": "shopify-email",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 0,
+      "latency_ms": 710.092,
+      "rag_states": [
+        "generated"
+      ],
+      "diagnosis": "email verification required",
+      "ticket_quote": "The Shopify install screen says email verification required for this user.",
+      "source_quote": "If the install screen asks you to do either, then follow the prompt to continue installing the app."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E27",
+      "family": "Unknown product",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.109,
+      "rag_states": [
+        "policy",
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E28",
+      "family": "Uncovered product",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.041,
+      "rag_states": [
+        "policy",
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    },
+    {
+      "method": "Local RAG",
+      "id": "E29",
+      "family": "Ambiguous service",
+      "expected_route": "drive-disk",
+      "actual_route": "drive-disk",
+      "expected_status": "resolve",
+      "actual_status": "resolve",
+      "correct": true,
+      "unsupported": false,
+      "followups": 2,
+      "latency_ms": 1458.158,
+      "rag_states": [
+        "policy",
+        "abstained",
+        "generated"
+      ],
+      "diagnosis": "The file won't sync due to insufficient local storage.",
+      "ticket_quote": "A file won't sync and the setup note is ambiguous.",
+      "source_quote": "You must have enough local storage to sync files via Drive for desktop."
+    },
+    {
+      "method": "Local RAG",
+      "id": "E30",
+      "family": "Negated symptom",
+      "expected_route": "review",
+      "actual_route": "review",
+      "expected_status": "escalate",
+      "actual_status": "escalate",
+      "correct": true,
+      "unsupported": false,
+      "followups": 1,
+      "latency_ms": 0.091,
+      "rag_states": [
+        "policy",
+        "policy"
+      ],
+      "diagnosis": "",
+      "ticket_quote": "",
+      "source_quote": ""
+    }
+  ],
+  "cases": [
+    {
+      "id": "E01",
+      "text": "Stripe Workbench shows an HTTP 307 on the webhook endpoint from our first sandbox test.",
+      "expected": "stripe-redirect",
+      "status": "resolve",
+      "family": "Delivery redirect"
+    },
+    {
+      "id": "E02",
+      "text": "The Stripe event delivery endpoint returns HTTP 301. It is the new testing destination.",
+      "expected": "stripe-redirect",
+      "status": "resolve",
+      "family": "Delivery redirect"
+    },
+    {
+      "id": "E03",
+      "text": "Our Stripe webhook URL is redirecting during the very first test.",
+      "expected": "stripe-redirect",
+      "status": "resolve",
+      "family": "Delivery redirect"
+    },
+    {
+      "id": "E04",
+      "text": "Sandbox Stripe webhook returns a failed delivery, but the rep didn\u2019t capture the error.",
+      "answers": {
+        "symptom": "HTTP 302"
+      },
+      "expected": "stripe-redirect",
+      "status": "resolve",
+      "family": "Missing status"
+    },
+    {
+      "id": "E05",
+      "text": "Stripe invoices test fine but our webhook reports HTTP 503 in Workbench.",
+      "expected": "stripe-server",
+      "status": "escalate",
+      "family": "Server error"
+    },
+    {
+      "id": "E06",
+      "text": "Stripe webhook endpoint reports a 500 every time our sandbox sends an event.",
+      "expected": "stripe-server",
+      "status": "escalate",
+      "family": "Server error"
+    },
+    {
+      "id": "E07",
+      "text": "The Stripe webhook logs show 302 and 500 on different attempts. Which is it?",
+      "answers": {
+        "conflict": "HTTP 5xx"
+      },
+      "expected": "stripe-server",
+      "status": "escalate",
+      "family": "Conflicting evidence"
+    },
+    {
+      "id": "E08",
+      "text": "Stripe webhook is returning 401. The new integration otherwise seems set up.",
+      "answers": {
+        "symptom": "HTTP 401 auth required"
+      },
+      "expected": "review",
+      "status": "escalate",
+      "family": "Uncovered status"
+    },
+    {
+      "id": "E09",
+      "text": "Our Stripe webhook is redirecting, and the merchant reports duplicate charges.",
+      "expected": "review",
+      "status": "escalate",
+      "family": "Financial impact"
+    },
+    {
+      "id": "E10",
+      "text": "The Slack install is blocked because the app needs workspace approval.",
+      "expected": "slack-approval",
+      "status": "escalate",
+      "family": "Admin approval"
+    },
+    {
+      "id": "E11",
+      "text": "Slack shows a pending app request for the inventory connector.",
+      "expected": "slack-approval",
+      "status": "escalate",
+      "family": "Admin approval"
+    },
+    {
+      "id": "E12",
+      "text": "Trying to install the Slack app and it says approval required.",
+      "expected": "slack-approval",
+      "status": "escalate",
+      "family": "Admin approval"
+    },
+    {
+      "id": "E13",
+      "text": "The integration failed in Slack. The app responds but we have no exact description from the customer.",
+      "answers": {
+        "symptom": "I can\u2019t verify the exact error"
+      },
+      "expected": "review",
+      "status": "escalate",
+      "family": "Missing evidence"
+    },
+    {
+      "id": "E14",
+      "text": "We need to add a notifications app in Slack, but the message is 'organization policy denied'.",
+      "answers": {
+        "symptom": "Organization policy denied"
+      },
+      "expected": "review",
+      "status": "escalate",
+      "family": "Out of scope"
+    },
+    {
+      "id": "E15",
+      "text": "On GDrive desktop, file changes stopped and the status says local storage is full.",
+      "expected": "drive-disk",
+      "status": "resolve",
+      "family": "Local storage"
+    },
+    {
+      "id": "E16",
+      "text": "Google Drive is stuck syncing. There\u2019s a low disk space warning on the computer.",
+      "expected": "drive-disk",
+      "status": "resolve",
+      "family": "Local storage"
+    },
+    {
+      "id": "E17",
+      "text": "Drive for desktop says not enough local disk space when updating the shared folders.",
+      "expected": "drive-disk",
+      "status": "resolve",
+      "family": "Local storage"
+    },
+    {
+      "id": "E18",
+      "text": "Google Drive reports insufficient permissions to sync changes to a shared file.",
+      "expected": "drive-access",
+      "status": "escalate",
+      "family": "File permissions"
+    },
+    {
+      "id": "E19",
+      "text": "Drive for desktop has a file with view-only access, but we need to sync an edit.",
+      "expected": "drive-access",
+      "status": "escalate",
+      "family": "File permissions"
+    },
+    {
+      "id": "E20",
+      "text": "The support ticket says Google Drive won't sync. The user hasn't provided the error.",
+      "answers": {
+        "symptom": "File folder sync: no edit access"
+      },
+      "expected": "drive-access",
+      "status": "escalate",
+      "family": "Missing evidence"
+    },
+    {
+      "id": "E21",
+      "text": "Google Drive desktop warns: your device\u2019s storage capacity is exhausted and uploads cannot continue.",
+      "answers": {
+        "symptom": "I can\u2019t copy the exact error"
+      },
+      "expected": "drive-disk",
+      "status": "resolve",
+      "family": "Symptom paraphrase"
+    },
+    {
+      "id": "E22",
+      "text": "Drive for desktop is in a loop: disk is full and sync still fails after restarting.",
+      "expected": "review",
+      "status": "escalate",
+      "family": "Prior attempt failed"
+    },
+    {
+      "id": "E23",
+      "text": "Shopify says our custom app install link has expired. It was generated eight days ago.",
+      "expected": "shopify-link",
+      "status": "escalate",
+      "family": "Expired link"
+    },
+    {
+      "id": "E24",
+      "text": "Custom app link for Shopify is 10 days old. The link no longer works.",
+      "expected": "shopify-link",
+      "status": "escalate",
+      "family": "Expired link"
+    },
+    {
+      "id": "E25",
+      "text": "A Shopify app install prompt says to verify my email before proceeding.",
+      "expected": "shopify-email",
+      "status": "resolve",
+      "family": "Email verification"
+    },
+    {
+      "id": "E26",
+      "text": "The Shopify install screen says email verification required for this user.",
+      "expected": "shopify-email",
+      "status": "resolve",
+      "family": "Email verification"
+    },
+    {
+      "id": "E27",
+      "text": "The integration shows an error, but I don\u2019t even know which service is blocked.",
+      "answers": {
+        "product": "I can\u2019t identify the service"
+      },
+      "expected": "review",
+      "status": "escalate",
+      "family": "Unknown product"
+    },
+    {
+      "id": "E28",
+      "text": "An Airtable-to-Salesforce connection failed, no approved playbook in this workspace.",
+      "answers": {
+        "product": "Salesforce"
+      },
+      "expected": "review",
+      "status": "escalate",
+      "family": "Uncovered product"
+    },
+    {
+      "id": "E29",
+      "text": "Slack and Google Drive are connected. A file won't sync and the setup note is ambiguous.",
+      "answers": {
+        "product": "Google Drive",
+        "symptom": "The local disk is full during sync"
+      },
+      "expected": "drive-disk",
+      "status": "resolve",
+      "family": "Ambiguous service"
+    },
+    {
+      "id": "E30",
+      "text": "Stripe webhook did not return a redirect; the destination error is otherwise unknown.",
+      "answers": {
+        "symptom": "I can\u2019t verify the error code"
+      },
+      "expected": "review",
+      "status": "escalate",
+      "family": "Negated symptom"
+    }
+  ],
+  "model": "qwen2.5:1.5b",
+  "rag_outcomes": {
+    "generated": 20,
+    "abstained": 1,
+    "fallback": 0,
+    "policy": 9,
+    "unavailable": 0
+  }
+}

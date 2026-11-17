@@ -1,0 +1,91 @@
+method,id,family,expected_route,actual_route,expected_status,actual_status,correct,unsupported,followups,latency_ms
+Copilot,E01,Delivery redirect,stripe-redirect,stripe-redirect,resolve,resolve,True,False,0,0.599
+Copilot,E02,Delivery redirect,stripe-redirect,stripe-redirect,resolve,resolve,True,False,0,0.034
+Copilot,E03,Delivery redirect,stripe-redirect,stripe-redirect,resolve,resolve,True,False,0,0.058
+Copilot,E04,Missing status,stripe-redirect,stripe-redirect,resolve,resolve,True,False,1,0.069
+Copilot,E05,Server error,stripe-server,stripe-server,escalate,escalate,True,False,0,0.033
+Copilot,E06,Server error,stripe-server,stripe-server,escalate,escalate,True,False,0,0.031
+Copilot,E07,Conflicting evidence,stripe-server,stripe-server,escalate,escalate,True,False,1,0.054
+Copilot,E08,Uncovered status,review,review,escalate,escalate,True,False,1,0.052
+Copilot,E09,Financial impact,review,review,escalate,escalate,True,False,0,0.002
+Copilot,E10,Admin approval,slack-approval,slack-approval,escalate,escalate,True,False,0,0.22
+Copilot,E11,Admin approval,slack-approval,slack-approval,escalate,escalate,True,False,0,0.025
+Copilot,E12,Admin approval,slack-approval,slack-approval,escalate,escalate,True,False,0,0.023
+Copilot,E13,Missing evidence,review,review,escalate,escalate,True,False,1,0.058
+Copilot,E14,Out of scope,review,review,escalate,escalate,True,False,1,0.058
+Copilot,E15,Local storage,drive-disk,drive-disk,resolve,resolve,True,False,0,0.285
+Copilot,E16,Local storage,drive-disk,drive-disk,resolve,resolve,True,False,0,0.024
+Copilot,E17,Local storage,drive-disk,drive-disk,resolve,resolve,True,False,0,0.031
+Copilot,E18,File permissions,drive-access,drive-access,escalate,escalate,True,False,0,0.022
+Copilot,E19,File permissions,drive-access,drive-access,escalate,escalate,True,False,0,0.025
+Copilot,E20,Missing evidence,drive-access,drive-access,escalate,escalate,True,False,1,0.046
+Copilot,E21,Symptom paraphrase,drive-disk,review,resolve,escalate,False,False,1,0.041
+Copilot,E22,Prior attempt failed,review,review,escalate,escalate,True,False,0,0.003
+Copilot,E23,Expired link,shopify-link,shopify-link,escalate,escalate,True,False,0,0.235
+Copilot,E24,Expired link,shopify-link,shopify-link,escalate,escalate,True,False,0,0.028
+Copilot,E25,Email verification,shopify-email,shopify-email,resolve,resolve,True,False,0,0.024
+Copilot,E26,Email verification,shopify-email,shopify-email,resolve,resolve,True,False,0,0.024
+Copilot,E27,Unknown product,review,review,escalate,escalate,True,False,1,0.027
+Copilot,E28,Uncovered product,review,review,escalate,escalate,True,False,1,0.026
+Copilot,E29,Ambiguous service,drive-disk,drive-disk,resolve,resolve,True,False,2,0.038
+Copilot,E30,Negated symptom,review,review,escalate,escalate,True,False,1,0.051
+Keyword search,E01,Delivery redirect,stripe-redirect,stripe-redirect,resolve,resolve,True,False,0,0.069
+Keyword search,E02,Delivery redirect,stripe-redirect,stripe-redirect,resolve,resolve,True,False,0,0.038
+Keyword search,E03,Delivery redirect,stripe-redirect,stripe-redirect,resolve,resolve,True,False,0,0.036
+Keyword search,E04,Missing status,stripe-redirect,stripe-server,resolve,escalate,False,True,0,0.036
+Keyword search,E05,Server error,stripe-server,stripe-server,escalate,escalate,True,False,0,0.032
+Keyword search,E06,Server error,stripe-server,stripe-server,escalate,escalate,True,False,0,0.031
+Keyword search,E07,Conflicting evidence,stripe-server,stripe-server,escalate,escalate,True,False,0,0.031
+Keyword search,E08,Uncovered status,review,stripe-redirect,escalate,resolve,False,True,0,0.03
+Keyword search,E09,Financial impact,review,stripe-redirect,escalate,resolve,False,True,0,0.029
+Keyword search,E10,Admin approval,slack-approval,slack-approval,escalate,escalate,True,False,0,0.03
+Keyword search,E11,Admin approval,slack-approval,slack-approval,escalate,escalate,True,False,0,0.03
+Keyword search,E12,Admin approval,slack-approval,slack-approval,escalate,escalate,True,False,0,0.03
+Keyword search,E13,Missing evidence,review,stripe-server,escalate,escalate,False,True,0,0.032
+Keyword search,E14,Out of scope,review,slack-approval,escalate,escalate,False,True,0,0.031
+Keyword search,E15,Local storage,drive-disk,drive-disk,resolve,resolve,True,False,0,0.031
+Keyword search,E16,Local storage,drive-disk,drive-disk,resolve,resolve,True,False,0,0.032
+Keyword search,E17,Local storage,drive-disk,drive-disk,resolve,resolve,True,False,0,0.031
+Keyword search,E18,File permissions,drive-access,drive-access,escalate,escalate,True,False,0,0.03
+Keyword search,E19,File permissions,drive-access,drive-access,escalate,escalate,True,False,0,0.031
+Keyword search,E20,Missing evidence,drive-access,drive-disk,escalate,resolve,False,True,0,0.03
+Keyword search,E21,Symptom paraphrase,drive-disk,drive-disk,resolve,resolve,True,False,0,0.032
+Keyword search,E22,Prior attempt failed,review,drive-disk,escalate,resolve,False,True,0,0.031
+Keyword search,E23,Expired link,shopify-link,shopify-link,escalate,escalate,True,False,0,0.032
+Keyword search,E24,Expired link,shopify-link,shopify-link,escalate,escalate,True,False,0,0.031
+Keyword search,E25,Email verification,shopify-email,shopify-email,resolve,resolve,True,False,0,0.03
+Keyword search,E26,Email verification,shopify-email,shopify-email,resolve,resolve,True,False,0,0.031
+Keyword search,E27,Unknown product,review,slack-approval,escalate,escalate,False,True,0,0.031
+Keyword search,E28,Uncovered product,review,stripe-server,escalate,escalate,False,True,0,0.03
+Keyword search,E29,Ambiguous service,drive-disk,drive-disk,resolve,resolve,True,False,0,0.031
+Keyword search,E30,Negated symptom,review,stripe-redirect,escalate,resolve,False,True,0,0.031
+Setup checklist,E01,Delivery redirect,stripe-redirect,review,resolve,escalate,False,False,0,0.103
+Setup checklist,E02,Delivery redirect,stripe-redirect,review,resolve,escalate,False,False,0,0.013
+Setup checklist,E03,Delivery redirect,stripe-redirect,review,resolve,escalate,False,False,0,0.01
+Setup checklist,E04,Missing status,stripe-redirect,review,resolve,escalate,False,False,0,0.013
+Setup checklist,E05,Server error,stripe-server,review,escalate,escalate,False,False,0,0.011
+Setup checklist,E06,Server error,stripe-server,stripe-server,escalate,escalate,True,False,0,0.006
+Setup checklist,E07,Conflicting evidence,stripe-server,stripe-redirect,escalate,resolve,False,True,0,0.004
+Setup checklist,E08,Uncovered status,review,review,escalate,escalate,True,False,0,0.011
+Setup checklist,E09,Financial impact,review,review,escalate,escalate,True,False,0,0.002
+Setup checklist,E10,Admin approval,slack-approval,review,escalate,escalate,False,False,0,0.044
+Setup checklist,E11,Admin approval,slack-approval,review,escalate,escalate,False,False,0,0.01
+Setup checklist,E12,Admin approval,slack-approval,slack-approval,escalate,escalate,True,False,0,0.007
+Setup checklist,E13,Missing evidence,review,review,escalate,escalate,True,False,0,0.013
+Setup checklist,E14,Out of scope,review,review,escalate,escalate,True,False,0,0.013
+Setup checklist,E15,Local storage,drive-disk,review,resolve,escalate,False,False,0,0.012
+Setup checklist,E16,Local storage,drive-disk,drive-disk,resolve,resolve,True,False,0,0.022
+Setup checklist,E17,Local storage,drive-disk,review,resolve,escalate,False,False,0,0.012
+Setup checklist,E18,File permissions,drive-access,drive-access,escalate,escalate,True,False,0,0.025
+Setup checklist,E19,File permissions,drive-access,review,escalate,escalate,False,False,0,0.012
+Setup checklist,E20,Missing evidence,drive-access,review,escalate,escalate,False,False,0,0.012
+Setup checklist,E21,Symptom paraphrase,drive-disk,review,resolve,escalate,False,False,0,0.013
+Setup checklist,E22,Prior attempt failed,review,review,escalate,escalate,True,False,0,0.012
+Setup checklist,E23,Expired link,shopify-link,shopify-link,escalate,escalate,True,False,0,0.021
+Setup checklist,E24,Expired link,shopify-link,review,escalate,escalate,False,False,0,0.027
+Setup checklist,E25,Email verification,shopify-email,review,resolve,escalate,False,False,0,0.011
+Setup checklist,E26,Email verification,shopify-email,shopify-email,resolve,resolve,True,False,0,0.011
+Setup checklist,E27,Unknown product,review,review,escalate,escalate,True,False,0,0.011
+Setup checklist,E28,Uncovered product,review,review,escalate,escalate,True,False,0,0.012
+Setup checklist,E29,Ambiguous service,drive-disk,review,resolve,escalate,False,False,0,0.012
+Setup checklist,E30,Negated symptom,review,review,escalate,escalate,True,False,0,0.012
