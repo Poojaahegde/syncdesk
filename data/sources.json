@@ -1,0 +1,175 @@
+[
+  {
+    "id": "stripe-redirect",
+    "product": "Stripe",
+    "aliases": [
+      "stripe"
+    ],
+    "code": "HTTP 3xx",
+    "title": "Use the final webhook destination URL",
+    "article": "Receive Stripe events in your webhook endpoint",
+    "section": "Fix HTTP status codes · 302 / 3xx",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/webhooks#fix-http-status-codes",
+    "passage": "Set the webhook endpoint destination to the URL resolved by the redirect.",
+    "keywords": "webhook event deliveries destination redirects redirected 301 302 303 307 308 3xx endpoint",
+    "signals": [
+      "\\b(?:301|302|303|307|308|3xx)\\b",
+      "\\bredirect(?:ing|ed|s)?\\b"
+    ],
+    "context": "\\b(?:webhook|endpoint|event deliver\\w*)\\b",
+    "steps": [
+      "In Stripe Workbench, open Webhooks, select the affected endpoint, and check Event deliveries.",
+      "Confirm the redirect’s final URL belongs to the intended integration before changing the endpoint destination.",
+      "Use the verified final URL directly and confirm a fresh sandbox delivery succeeds."
+    ]
+  },
+  {
+    "id": "stripe-server",
+    "product": "Stripe",
+    "aliases": [
+      "stripe"
+    ],
+    "code": "HTTP 5xx",
+    "title": "Send the failed delivery to the endpoint owner",
+    "article": "Receive Stripe events in your webhook endpoint",
+    "section": "Fix HTTP status codes · 500 / 5xx",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/webhooks#fix-http-status-codes",
+    "passage": "Review your application’s logs",
+    "keywords": "webhook server endpoint event delivery failed 500 502 503 504 5xx logs",
+    "signals": [
+      "\\b(?:500|502|503|504|5xx)\\b"
+    ],
+    "context": "\\b(?:webhook|endpoint|event deliver\\w*)\\b",
+    "queue": "Integration engineering",
+    "steps": [
+      "Open the failed delivery in Stripe Workbench and record the status and timestamp without copying secrets.",
+      "Ask the endpoint owner to inspect the matching application logs."
+    ]
+  },
+  {
+    "id": "slack-approval",
+    "product": "Slack",
+    "aliases": [
+      "slack"
+    ],
+    "code": "App approval",
+    "title": "Route the app request for workspace approval",
+    "article": "Manage app requests for your workspace",
+    "section": "What to expect",
+    "publisher": "Slack Help Center",
+    "url": "https://slack.com/intl/en-gb/help/articles/360024269514-Manage-app-requests-for-your-workspace",
+    "passage": "App requests are sent to all workspace owners and app managers.",
+    "keywords": "workspace app approval requested pending requires request install administrator blocked",
+    "signals": [
+      "\\b(?:pending approval|(?:requires?|needs?|awaiting) (?:workspace |admin |owner |app )?approval|(?:app )?approval (?:is )?required|request(?:ed)? (?:app )?approval|pending (?:app |install )?request)\\b"
+    ],
+    "context": "\\b(?:app|install\\w*|connector|integration)\\b",
+    "queue": "Workspace owner or app manager",
+    "steps": [
+      "Capture the app name and requested permissions from the workspace app request.",
+      "Ask a Slack workspace owner or approved app manager to review the request through Slack’s app management workflow."
+    ]
+  },
+  {
+    "id": "drive-disk",
+    "product": "Google Drive",
+    "aliases": [
+      "google drive",
+      "drive for desktop",
+      "gdrive"
+    ],
+    "code": "Local storage",
+    "title": "Free up local space before retrying sync",
+    "article": "Fix problems in Drive for desktop",
+    "section": "Your disk space is low or your storage is almost full",
+    "publisher": "Google Drive Help",
+    "url": "https://support.google.com/drive/answer/2565956?hl=en-GB",
+    "passage": "You must have enough local storage to sync files via Drive for desktop.",
+    "keywords": "desktop sync local disk space full low storage hard drive computer",
+    "signals": [
+      "\\b(?:low disk(?: space)?|disk space is low|(?:local |hard )?disk (?:is )?full|not enough (?:local )?disk space|local storage (?:is )?full)\\b"
+    ],
+    "context": "\\b(?:desktop|sync\\w*)\\b",
+    "steps": [
+      "Check free space on the local drive named in the error.",
+      "Free space through your normal storage cleanup process, or unpin files that no longer need offline access.",
+      "Quit and restart Drive for desktop, then verify that the affected upload resumes."
+    ]
+  },
+  {
+    "id": "drive-access",
+    "product": "Google Drive",
+    "aliases": [
+      "google drive",
+      "drive for desktop",
+      "gdrive"
+    ],
+    "code": "Edit access",
+    "title": "Ask the file or shared drive owner for edit access",
+    "article": "Fix problems in Drive for desktop",
+    "section": "You don’t have permissions to sync files",
+    "publisher": "Google Drive Help",
+    "url": "https://support.google.com/drive/answer/2565956?hl=en-GB",
+    "passage": "request edit access",
+    "keywords": "drive desktop sync files folder permission edit access rights owner insufficient",
+    "signals": [
+      "\\b(?:permissions? to sync|insufficient (?:google drive )?permissions?|view.only (?:access|permission)|(?:need|missing|lack|no) edit access)\\b"
+    ],
+    "context": "\\b(?:file|folder|sync\\w*)\\b",
+    "queue": "File owner or shared drive manager",
+    "steps": [
+      "Identify the affected file or folder and confirm that the user is trying to sync an edit.",
+      "Ask the file owner or shared drive manager for the required edit access."
+    ]
+  },
+  {
+    "id": "shopify-link",
+    "product": "Shopify",
+    "aliases": [
+      "shopify"
+    ],
+    "code": "Expired install link",
+    "title": "Ask the developer for a fresh custom app link",
+    "article": "Installing and setting up apps",
+    "section": "Install a custom app",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/apps/install-setup-apps#install-a-custom-app",
+    "passage": "custom install links expire after seven days",
+    "keywords": "expired invalid old week custom app install link developer store",
+    "signals": [
+      "\\b(?:expired|expiration|has expired|link is old|(?:8|9|10|14) days old|over a week old)\\b"
+    ],
+    "context": "\\bcustom app\\b.*\\b(?:link|url)\\b|\\b(?:link|url)\\b.*\\bcustom app\\b",
+    "queue": "Custom app developer",
+    "steps": [
+      "Confirm that the install link belongs to the intended store and was issued for a custom app.",
+      "Request a fresh store-specific link from the developer and review permissions before proceeding."
+    ]
+  },
+  {
+    "id": "shopify-email",
+    "product": "Shopify",
+    "aliases": [
+      "shopify"
+    ],
+    "code": "Verify email",
+    "title": "Complete the email verification prompt",
+    "article": "Installing and setting up apps",
+    "section": "Before installing an app",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/apps/install-setup-apps",
+    "passage": "If the install screen asks you to do either, then follow the prompt to continue installing the app.",
+    "keywords": "install verification email verify store prompt account",
+    "signals": [
+      "\\b(?:verify (?:my |your |the )?email|email verification|unverified email)\\b"
+    ],
+    "context": "\\b(?:install\\w*|app)\\b",
+    "steps": [
+      "Confirm the prompt appears inside the Shopify app install screen.",
+      "Follow the email verification prompt in Shopify, then return to the install screen.",
+      "Review the app’s requested access before deciding whether to continue."
+    ]
+  }
+]

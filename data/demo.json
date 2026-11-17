@@ -1,0 +1,7 @@
+[
+  {"id":"SD-1042","name":"Acorn Supply Co.","initials":"AS","title":"Webhook fails during first delivery","product":"Stripe","time":"9:42 AM","color":"purple","text":"We set up a new Stripe webhook. In Event deliveries, the first sandbox event failed with HTTP 302. The endpoint redirects to a different path on our integration."},
+  {"id":"SD-1041","name":"Juniper Studio","initials":"JS","title":"Integration won’t connect","product":"Unspecified","time":"9:28 AM","color":"amber","text":"Our integration won’t connect during setup. I can’t tell what changed and I don’t have the exact error yet."},
+  {"id":"SD-1038","name":"Harbor Paper","initials":"HP","title":"Desktop files stop syncing","product":"Google Drive","time":"9:14 AM","color":"blue","text":"Drive for desktop stopped syncing updates to a folder. The error says my disk space is low."},
+  {"id":"SD-1036","name":"Fieldwork Goods","initials":"FG","title":"Workspace app needs approval","product":"Slack","time":"8:56 AM","color":"green","text":"We’re installing the inventory app in our Slack workspace. It says the app requires approval and the install request is pending."},
+  {"id":"SD-1035","name":"Orchard Home","initials":"OH","title":"Custom app link expired","product":"Shopify","time":"8:37 AM","color":"amber","text":"The Shopify custom app install link expired. Our developer sent it more than a week ago for this store."}
+]
